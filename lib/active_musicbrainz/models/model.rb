@@ -29,6 +29,11 @@ module ActiveMusicbrainz
       model :l_artist_url do
         belongs_to :artist, foreign_key: :entity0
         belongs_to :url, foreign_key: :entity1
+        belongs_to :link, foreign_key: :link
+      end
+
+      model :link do
+        belongs_to :link_type, foreign_key: :link_type
       end
 
       model :artist_credit_name do
